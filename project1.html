@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<link rel="stylesheet" href="project1.css"/>
+<style>
+  h2{color:blue;text-align: center;}
+  #btn{
+    color:blueviolet;
+    border:none;
+    padding:20px;
+    text-align: center;
+    font-size:20px;
+    }
+</style>
+  <title>jjument</title>
+</head>
+<body>
+
+<main>
+  <div class="container">
+    <h2>background colro:
+      <span class="color">
+        #f1f5f8
+      </span>  </h2>
+      <div id="btn"><button id="btn">click me</button></div></div>
+      <div id="btn">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto magnam iure error accusantium voluptates eos maxime velit, perspiciatis nam aperiam enim quaerat dolor assumenda vitae eligendi natus possimus vel asperiores.</div>
+  
+  </div>
+</main>
+
+  <script >
+     const colors=[0,1,2,3,4,5,6,7,8,9,'A','B','C','D','F'];
+ const btn=document.querySelector('#btn')
+ const color= document.querySelector('.color')
+ const getRandomNumber=()=>{
+  return Math.floor(Math.random()*colors.length);
+ }
+
+
+ btn.addEventListener('click',()=>{
+  let randomNumber='#';
+  for(let i=0; i<6; i++){randomNumber+=colors[getRandomNumber()]
+  }
+  document.body.style.backgroundColor= randomNumber;
+ 
+  color.textContent=randomNumber;
+  console.log(randomNumber);
+ })
+
+  </script>
+  <script src="project1.js"></script>
+</body>
+</html>
