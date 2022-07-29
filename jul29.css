@@ -1,0 +1,70 @@
+body{
+  background-color: rgb(176, 176, 238);
+  padding-top:80px}
+
+
+h1{display:flex;
+ justify-content: center;
+ position: fixed;
+  top:0px;
+  left:0px;
+  right:0px;
+  margin:0px;
+  background-color: rgb(76, 158, 158);
+  box-shadow: 0 2px 4px rgb(2, 2, 2);
+  padding: 10px;
+
+}
+
+#wrapp{display:flex;
+  /* flex is in row in default 
+  manipulate items inside
+  */
+  gap:10px;
+  flex-wrap:wrap;
+  margin:20px;
+  /* wrap around */
+}
+.question{
+  height:30px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 10px;
+
+  color:rgb(13, 107, 107);
+  cursor:pointer;
+  transition:color .5s;
+
+  border-right: 25px solid rgb(31, 105, 22);
+  background-color: rgb(210, 181, 231);
+  box-shadow: 0 1px 2px rgb(2, 2, 2) ;
+  border-radius: 5px;}
+  
+.question:hover{color:rgb(234, 99, 99)}
+.status{width: 20px;height: 20px; border-radius: 50%;margin:5px}
+.correct{background:linear-gradient(rgb(240, 234, 234),blue)}
+.corect{background:linear-gradient(red,rgb(208, 208, 225))}
+.partically{background:linear-gradient(red,rgb(49, 49, 91))}
+
+/* '.status correct' can be seperateed into .status and .correct classes(status is parent) */
+
+.cata{ 
+  height:150px;
+  display:flex;
+
+  flex-grow:1;
+  flex-direction: column;
+  gap:10px;
+  
+}
+h2{margin:0}
+
+
+#h12{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-transform:uppercase
+  
+}
