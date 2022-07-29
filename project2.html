@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+ .container{display:flex; flex-direction:column; 
+ align-items: center;gap:40px;font-size: 60px;}
+ .but{background-color: transparent;}
+</style>
+  <title>counting</title>
+</head>
+<body>
+
+<main>
+  <div class="container">
+    counter
+    <span id="value">0</span>
+    <div class="buttonContainer">
+      <button class="but decrease">decrease</button>
+      <button class="but reset">reset</button>
+      <button class="but increase">increase</button>
+    </div>
+    
+  </div>
+</main>
+
+  <script >
+
+
+ let count=0;
+ const value=document.querySelector('#value')
+ const buts=document.querySelectorAll('.but');
+
+
+buts.forEach(function(but){
+  but.addEventListener('click', e=>{
+    const butclass=e.target.classList;
+  if(butclass.contains('decrease')){
+    count--;
+  }else if(butclass.contains('increase')){count++}else{count=0}
+  if(count>0){value.style.color='green'}else if(count<0){value.style.color='red'}
+  else{value.style.color='black'}
+
+  value.textContent=count;
+})
+})
+  
+
+  </script>
+</body>
+</html>
